@@ -148,7 +148,7 @@ function updateEggNumber(eggs){
     var allnumeggs=document.getElementsByClassName('num-miners')
     for(var i=0;i<allnumeggs.length;i++){
         if(allnumeggs[i]){
-            allnumeggs[i].textContent=translateQuantity(eggs,3)
+            allnumeggs[i].textContent=translateQuantity(eggs,5)
         }
     }
 }
@@ -173,7 +173,7 @@ function liveUpdateEggs(){
 function updateSellPrice(){
   var eggstoselldoc=document.getElementById('sell-price')
    getMyEggs(function(eggs){
-        if (eggs > 0) {
+        if (eggs > 0.000000001) {
             calculateEggSell(eggs,function(sun){
                 devFee(sun,function(fee){
                     eggstoselldoc.textContent=formatTrxValue(web3.utils.fromWei(sun) - web3.utils.fromWei(fee))
