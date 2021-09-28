@@ -148,7 +148,7 @@ function updateEggNumber(eggs){
     var allnumeggs=document.getElementsByClassName('num-miners')
     for(var i=0;i<allnumeggs.length;i++){
         if(allnumeggs[i]){
-            allnumeggs[i].textContent=translateQuantity(eggs,5)
+            allnumeggs[i].textContent=translateQuantity(eggs,8)
         }
     }
 }
