@@ -176,7 +176,7 @@ function updateSellPrice(){
         if (eggs > 0.000000001) {
             calculateEggSell(eggs,function(sun){
                 devFee(sun,function(fee){
-                    eggstoselldoc.textContent=formatTrxValue(web3.utils.fromWei(sun) - web3.utils.fromWei(fee)).toPrecision(10)
+                    eggstoselldoc.textContent=formatTrxValue(web3.utils.fromWei(sun) - web3.utils.fromWei(fee))
                 });
             });
         }
