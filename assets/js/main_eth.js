@@ -176,7 +176,7 @@ function updateSellPrice(){
         if (eggs > 0.000000001) {
             calculateEggSell(eggs,function(sun){
                 devFee(sun,function(fee){
-                    eggstoselldoc.textContent=formatTrxValue(web3.utils.fromWei(sun) - web3.utils.fromWei(fee)).toPrecision(10)
+                    eggstoselldoc.textContent=formatTrxValue(web3.utils.fromWei(sun) - web3.utils.fromWei(fee))
                 });
             });
         }
@@ -568,7 +568,7 @@ function displayModalMessage(message){
     setTimeout(removeModal,3000)
 }
 function formatTrxValue(trxstr){
-    return parseFloat(parseFloat(trxstr).toFixed(4));
+    return parseFloat(parseFloat(trxstr).toFixed(9));
 }
 function getQueryVariable(variable)
 {
