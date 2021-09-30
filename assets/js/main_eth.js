@@ -107,8 +107,8 @@ function refreshData(){
 
     var userBalanceElem = document.getElementById('user-balance');
     userBalance(function(result){
-        rawStr = numberWithCommas(Number(result).toFixed(3));
-        userBalanceElem.textContent = stripDecimals(rawStr, 3) + ' BTCB';
+        rawStr = numberWithCommas(Number(result).toFixed(8));
+        userBalanceElem.textContent = stripDecimals(rawStr) + ' BTCB';
     });
 
     lastHatch(currentAddr,function(lh){
