@@ -107,7 +107,7 @@ function refreshData(){
 
     var userBalanceElem = document.getElementById('user-balance');
     userBalance(function(result){
-        rawStr = numberWithCommas(Number(result).toFixed(8));
+        rawStr = Number(result).toFixed(8);
         userBalanceElem.textContent = stripDecimals(rawStr) + ' BTCB';
     });
 
